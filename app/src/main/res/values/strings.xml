@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ALC Challenge</string>
+
+    <string name="title_name">First Name:</string>
+    <string name="surname">Surname:</string>
+    <string name="Learning_track">Learning Track:</string>
+    <string name="email">Email Address:</string>
+    <string name="phone_num">Phone Number:</string>
+    <string name="country">Location:</string>
+
+    <string name="title_name1">Trust</string>
+    <string name="surname1">Onyekwere</string>
+    <string name="Learning_track1">Android</string>
+    <string name="email1">iamtjah@gmail.com</string>
+    <string name="phone_num1">08177472801</string>
+    <string name="country1">Nigeria</string>
+</resources>
