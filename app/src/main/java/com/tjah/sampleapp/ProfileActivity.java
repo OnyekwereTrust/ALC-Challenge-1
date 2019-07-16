@@ -21,10 +21,6 @@ public class ProfileActivity extends AppCompatActivity {
         if (ab != null) {
             ab.setDisplayHomeAsUpEnabled(true);
         }
-
-
-
     }
-
 
 }

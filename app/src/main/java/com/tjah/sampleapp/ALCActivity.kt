@@ -4,10 +4,7 @@ import android.net.http.SslError
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
-import android.webkit.SslErrorHandler
-import android.webkit.WebChromeClient
-import android.webkit.WebSettings
-import android.webkit.WebView
+import android.webkit.*
 import kotlinx.android.synthetic.main.activity_alc.*
 import kotlinx.android.synthetic.main.activity_sample_main.*
 
@@ -39,6 +36,14 @@ class ALCActivity : AppCompatActivity() {
                 // Return the app name after finish loading
                 if (progress == 100)
                     title = "About ALC"
+
+
+            }
+        }
+
+        webView.webViewClient = object : WebViewClient() {
+            override fun onReceivedSslError(view: WebView, handler: SslErrorHandler, error: SslError) {
+                handler.proceed()
             }
         }
 
@@ -59,5 +64,15 @@ class ALCActivity : AppCompatActivity() {
 
         //webView.loadUrl("file:///android_asset/myresource.html")
 
+
+    }
+
+    override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+
+            super.onBackPressed()
+        }
     }
 }
